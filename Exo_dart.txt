@@ -1,0 +1,40 @@
+class User{
+ String nom='';
+ String prenom='';
+ String address='';
+  void manger(){
+    print("je mange du pain");
+  }
+    String getInfo(){
+    return '${this.nom}';
+  }
+
+}
+class Apprenants extends User {
+  String a;
+  Apprenants(String nom,String prenom,String address, String niveauEtude):a= niveauEtude, super(nom,prenom,address);
+  
+ 
+  void etudier(){
+    
+    print("j'etudier flutter");
+  }
+  
+  void passerExamen(){
+      
+    print('je passe un examen');
+  }
+  String getMes(){
+    return '${this.a}';
+    
+  }
+
+}
+void main() {
+ User a1= new User();
+   a1.nom= 'diouf';
+   a1.prenom='ndeye';
+   a1.address= 'P.A';
+  print(a1.getInfo());
+  }
+
